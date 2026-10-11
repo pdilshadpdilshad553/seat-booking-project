@@ -1,0 +1,72 @@
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: Arial, sans-serif; }
+
+body { background: whitesmoke; color: black; }
+
+header { background: navy; color: white; text-align: center; padding: 16px; }
+
+main { max-width: 760px; margin: 20px auto; padding: 0 12px; }
+
+section { background: white; padding: 18px; border-radius: 10px; margin-bottom: 18px;
+          box-shadow: 0 2px 6px lightgray; }
+
+h2 { margin-bottom: 12px; font-size: 18px; }
+
+.hidden { display: none; }
+
+/* show buttons */
+.show-list { display: flex; gap: 12px; flex-wrap: wrap; }
+.show-btn { flex: 1; min-width: 200px; padding: 12px; border: 2px solid navy; background: white;
+            border-radius: 8px; cursor: pointer; text-align: left; line-height: 1.5; }
+.show-btn:hover, .show-btn.active { background: navy; color: white; }
+
+/* movie info */
+.info-bar { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 10px; margin-bottom: 12px; }
+.info-bar div { background: aliceblue; padding: 8px 10px; border-radius: 6px; }
+.info-bar span { display: block; font-size: 12px; color: gray; }
+
+/* counts */
+.counts { display: flex; gap: 16px; margin-bottom: 10px; font-size: 14px; flex-wrap: wrap; }
+.available-text { color: green; }
+.booked-text { color: red; }
+.blocked-text { color: gray; }
+
+/* legend */
+.legend { display: flex; gap: 14px; font-size: 13px; margin-bottom: 14px; flex-wrap: wrap; }
+.box { display: inline-block; width: 14px; height: 14px; border-radius: 3px; vertical-align: middle; margin-right: 4px; }
+
+/* screen and seats */
+.screen-bar { background: lightsteelblue; text-align: center; padding: 6px; border-radius: 4px;
+              font-size: 12px; letter-spacing: 2px; margin-bottom: 14px; }
+
+.seat-grid { display: grid; grid-template-columns: repeat(10, 1fr); gap: 6px; margin-bottom: 20px; }
+
+.seat { padding: 9px 0; text-align: center; font-size: 12px; border-radius: 5px;
+        border: 1px solid transparent; user-select: none; }
+
+/* available seat */
+.available, .seat.available { background: honeydew; border-color: green; color: green; cursor: pointer; }
+.seat.available:hover { background: lightgreen; }
+
+/* selected seat */
+.selected, .seat.selected { background: dodgerblue; border-color: dodgerblue; color: white; }
+
+/* booked seat */
+.booked, .seat.booked { background: lightcoral; border-color: red; color: darkred; cursor: not-allowed; }
+
+/* blocked seat */
+.blocked, .seat.blocked { background: silver; border-color: gray; color: dimgray; cursor: not-allowed; }
+
+/* booking form */
+.summary { margin-bottom: 12px; line-height: 1.8; }
+.form { display: flex; gap: 10px; flex-wrap: wrap; }
+.form input { flex: 1; min-width: 160px; padding: 10px; border: 1px solid silver; border-radius: 6px; }
+.form button { padding: 10px 24px; background: green; color: white; border: none;
+               border-radius: 6px; cursor: pointer; font-size: 15px; }
+.form button:hover { background: darkgreen; }
+
+/* messages */
+.message { margin-top: 12px; font-weight: bold; }
+.message.error { color: red; }
+.message.success { color: green; }
+
+.confirmation { border-left: 6px solid green; line-height: 1.8; }

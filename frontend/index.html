@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Seat Booking</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Top heading -->
+    <header>
+        <h1>Movie Seat Booking</h1>
+    </header>
+
+    <main>
+
+        <!-- PART 1: Show buttons (script.js adds them here) -->
+        <section>
+            <h2>1. Choose a show</h2>
+            <div id="showList" class="show-list"></div>
+        </section>
+
+
+        <!-- PART 2: Seats and booking (hidden until a show is clicked) -->
+        <section id="bookingSection" class="hidden">
+
+            <h2>2. Choose your seats</h2>
+
+            <!-- Movie details -->
+            <div class="info-bar">
+                <div><span>Movie</span> <strong id="infoMovie"></strong></div>
+                <div><span>Screen</span> <strong id="infoScreen"></strong></div>
+                <div><span>Time</span> <strong id="infoTime"></strong></div>
+                <div><span>Price per seat</span> <strong id="infoPrice"></strong></div>
+            </div>
+
+            <!-- Seat counts -->
+            <div class="counts">
+                <span class="available-text">Available: <b id="availableCount">0</b></span>
+                <span class="booked-text">Booked: <b id="bookedCount">0</b></span>
+                <span class="blocked-text">Blocked: <b id="blockedCount">0</b></span>
+            </div>
+
+            <!-- Color guide -->
+            <div class="legend">
+                <span><i class="box available"></i> Available</span>
+                <span><i class="box selected"></i> Selected</span>
+                <span><i class="box booked"></i> Booked</span>
+                <span><i class="box blocked"></i> Blocked</span>
+            </div>
+
+            <!-- Screen bar and seats (script.js adds the 80 seats here) -->
+            <div class="screen-bar">SCREEN</div>
+            <div id="seatGrid" class="seat-grid"></div>
+
+
+            <!-- PART 3: Customer details -->
+            <h2>3. Your details</h2>
+
+            <div class="summary">
+                <p>Selected seats: <strong id="selectedSeats">None</strong></p>
+                <p>Total amount: <strong id="totalAmount">₹0</strong></p>
+            </div>
+
+            <div class="form">
+                <input type="text" id="customerName" placeholder="Your name">
+                <input type="text" id="phone" placeholder="Phone (10 digits)" maxlength="10">
+                <button id="bookBtn">Book Now</button>
+            </div>
+
+            <!-- Error or success message -->
+            <p id="message" class="message"></p>
+
+        </section>
+
+
+        <!-- PART 4: Confirmation (hidden until booking is done) -->
+        <section id="confirmation" class="hidden confirmation"></section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
